@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.todoapp.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa">
+        <action
+            android:id="@+id/tdDetayGecis"
+            app:destination="@id/TDDetayFragment" />
+        <action
+            android:id="@+id/tdKayitGecis"
+            app:destination="@id/TDKayitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TDDetayFragment"
+        android:name="com.example.todoapp.ui.fragment.TDDetayFragment"
+        android:label="fragment_kisi_detay"
+        tools:layout="@layout/fragment_td_detay">
+        <argument
+            android:name="name"
+            app:argType="com.example.todoapp.data.entity.ToDo" />
+    </fragment>
+    <fragment
+        android:id="@+id/TDKayitFragment"
+        android:name="com.example.todoapp.ui.fragment.TDKayitFragment"
+        android:label="fragment_kisi_kayit"
+        tools:layout="@layout/fragment_td_kayit" />
+</navigation>
